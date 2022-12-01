@@ -1,0 +1,26 @@
+<p>offres-emploi-component works!</p>
+
+<table border="2">
+  <tr>
+    <td>refernce</td>
+    <td>titre</td>
+    <td>entreprise</td>
+    <td>etat</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor="let e of listeEmploi;let i=index">
+    <td>{{e.reference}}</td>
+    <td>{{e.titre}}</td>
+    <td>{{e.entreprise}}</td>
+    <td>{{e.etat}}</td>
+    <td>
+      <input  type="submit" value="postuler"  [disabled]="e.etat==false">
+    </td>
+  </tr>
+
+</table>
+<div>
+ <a>{{count}} etat false ! </a>
+</div>
+
+

@@ -1,0 +1,25 @@
+<p>Les Articles du jour</p>
+<p>Le championnat du monde</p>
+<table>
+
+  <td>
+
+     <tr>--></tr>
+    <tr>auteur</tr>
+    <tr>date</tr>
+    <tr>contenu</tr>
+
+  </td>
+
+  <td *ngFor="let a of listeArticles">
+    <div *ngIf="a.categorie != 'Travail' ">
+
+    <tr>{{a.titre}}</tr>
+    <tr>{{a.auteur}}</tr>
+    <tr>{{a.date}}</tr>
+    <tr>{{a.contenu}}</tr>
+    </div>
+  </td>
+
+
+</table>

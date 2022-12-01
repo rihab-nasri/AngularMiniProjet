@@ -1,0 +1,29 @@
+<p>products works!</p>
+<input type="number" [(ngModel)]="search">
+<p> </p>
+
+<table border="2">
+  <tr>
+    <td>id</td>
+    <td>Title</td>
+    <td>Price</td>
+    <td>Quantity</td>
+    <td>Like</td>
+    <td>Action</td>
+  </tr>
+  <tr *ngFor="let p of listProdcut; let i=index">
+  <div *ngIf="p.price<search || search==0">
+    <td>{{p.id}}</td>
+    <td>{{p.title}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.quantity}}</td>
+    <td>{{p.like}}</td>
+  <td>
+    <input type="submit" value="Buy" (click)="decreaseQuantity(i)" [disabled]="p.quantity==0">
+    <input type="submit" value="like"(click)="InscreaseLike(p)" >
+  </td>
+  </div>
+  </tr>
+
+</table>
+
